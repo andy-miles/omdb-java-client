@@ -1,0 +1,41 @@
+{
+  "Search": [
+    {
+      "Title": "Game of Thrones",
+      "Year": "2011–2019",
+      "imdbID": "tt0944947",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTNhMDJmNmYtNDQ5OS00ODdlLWE0ZDAtZTgyYTIwNDY3OTU3XkEyXkFqcGc@._V1_SX300.jpg"
+    },
+    {
+      "Title": "Stupid for Game of Thrones",
+      "Year": "2012",
+      "imdbID": "tt2143796",
+      "Type": "series",
+      "Poster": "N/A"
+    },
+    {
+      "Title": "Vennori: Lets Play - Game of Thrones",
+      "Year": "2014–",
+      "imdbID": "tt5779388",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMDllZTA2ZTItZDQ4YS00ZDk0LThlZDctZGVlZDY5MmExM2Y1XkEyXkFqcGdeQXVyMzUwNDgxNTY@._V1_SX300.jpg"
+    },
+    {
+      "Title": "GoT Thrones? A Game of Thrones Podcast",
+      "Year": "2015–2019",
+      "imdbID": "tt14371206",
+      "Type": "series",
+      "Poster": "N/A"
+    },
+    {
+      "Title": "World's Deadliest: Game of Thrones",
+      "Year": "2014–",
+      "imdbID": "tt4845438",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNzM3YWM1NTItODI5YS00ODYyLTkyNjAtMDQxZTJkMDY5ODA3XkEyXkFqcGdeQXVyMTI0MzYwMjEw._V1_SX300.jpg"
+    }
+  ],
+  "totalResults": "5",
+  "Response": "True"
+}

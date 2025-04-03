@@ -1,0 +1,28 @@
+{
+  "Title": "Game of Thrones",
+  "Season": "1",
+  "totalSeasons": "8",
+  "Episodes": [
+    {
+      "Title": "Unaired Original Pilot",
+      "Released": "N/A",
+      "Episode": "0",
+      "imdbRating": "N/A",
+      "imdbID": "tt31321401"
+    },
+    {
+      "Title": "Winter Is Coming",
+      "Released": "2011-04-17",
+      "Episode": "1",
+      "imdbRating": "8.9",
+      "imdbID": "tt1480055"
+    },
+    {
+      "Title": "The Kingsroad",
+      "Released": "2011-04-24",
+      "Episode": "2",
+      "imdbRating": "8.6",
+      "imdbID": "tt1668746"
+    }],
+  "Response": "True"
+}
