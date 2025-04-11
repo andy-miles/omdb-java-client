@@ -121,7 +121,8 @@ Series tvSeries =
 Season tvSeason =
         client.getSeason(GetSeasonByTitleRequest.builder()
                 .title("Game of Thrones")
-                .season(1).build());
+                .season(1)
+                .build());
 
 Episode tvEpisode =
         client.getEpisode(GetEpisodeByTitleRequest.builder()
