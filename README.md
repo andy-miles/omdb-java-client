@@ -131,7 +131,7 @@ Episode tvEpisode =
                 .build());
 ```
 
-### Retrieving content by IMDB id
+### Retrieving content by IMDB ID
 
 ```java
 OMDb client = new OMDb("MyApiKey");

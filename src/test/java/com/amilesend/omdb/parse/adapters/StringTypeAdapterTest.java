@@ -42,7 +42,7 @@ public class StringTypeAdapterTest {
 
     @Test
     public void deserialize_withNullElement_shouldReturnNull() {
-        assertNull(adaptorUnderTest.deserialize(new JsonNull(), mockType, mockContext));
+        assertNull(adaptorUnderTest.deserialize(JsonNull.INSTANCE, mockType, mockContext));
     }
 
     @Test

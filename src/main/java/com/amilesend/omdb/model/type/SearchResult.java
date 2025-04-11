@@ -31,7 +31,7 @@ public class SearchResult {
     private final String year;
     /** The IMDB identifier. */
     @SerializedName("imdbID")
-    private final String imdbDb;
+    private final String imdbId;
     /** The media type. */
     private final MediaType type;
     /** The URL to the associated poster image. */
