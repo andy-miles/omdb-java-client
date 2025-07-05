@@ -29,7 +29,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.lang.reflect.Type;
 
 import static com.amilesend.omdb.parse.adapters.StringTypeAdaptor.NOT_AVAILABLE;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @ExtendWith(MockitoExtension.class)
 public class StringTypeAdapterTest {

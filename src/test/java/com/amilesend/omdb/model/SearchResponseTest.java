@@ -25,8 +25,8 @@ import java.util.List;
 
 import static com.amilesend.omdb.data.DataHelper.newSeriesSearchResponse;
 import static com.amilesend.omdb.data.DataHelper.newSeriesSearchResults;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SearchResponseTest {
     @Test

@@ -52,7 +52,7 @@ import static com.amilesend.omdb.data.DataHelper.newMovieSearchResponse;
 import static com.amilesend.omdb.data.DataHelper.newSeason;
 import static com.amilesend.omdb.data.DataHelper.newSeries;
 import static com.amilesend.omdb.data.DataHelper.newSeriesSearchResponse;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OMDbFunctionalTest extends FunctionalTestBase {
     private OMDb clientUnderTest;
