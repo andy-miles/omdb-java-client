@@ -91,6 +91,6 @@ public class FunctionalTestBase {
                 .httpClient(httpClient)
                 .authManager(new NoOpAuthManager())
                 .build();
-        client = new OMDb("apiKey", connection);
+        client = new OMDb("apiKey", "TestUserAgent/1.0", connection);
     }
 }

@@ -68,27 +68,39 @@ public class OMDb {
      * @param apiKey the API key
      */
     public OMDb(final String apiKey) {
-        this(apiKey, null);
+        this(apiKey, USER_AGENT, null);
+    }
+
+    /**
+     * Creates a nwe {@code OMDb} with the provided API key and user agent.
+     *
+     * @param apiKey the API key
+     * @param userAgent the user agent
+     */
+    public OMDb(final String apiKey, final String userAgent) {
+        this(apiKey, userAgent, null);
     }
 
     /**
      * Creates a new {@code OMDb} with the provided connection and API key.
      *
-     * @param connection the underlying connection
      * @param apiKey the API key
+     * @param userAgent the user agent
+     * @param connection the underlying connection
      */
-    public OMDb(final String apiKey, final OmdbConnection connection) {
+    public OMDb(final String apiKey, final String userAgent, final OmdbConnection connection) {
         Validate.notBlank(apiKey, "apiKey must not be blank. You can obtain one via " +
                 "https://www.omdbapi.com/apikey.aspx");
+        Validate.notBlank(userAgent, "userAgent must not be blank");
 
-        this.connection = Optional.ofNullable(connection).orElseGet(OMDb::newConnection);
+        this.connection = Optional.ofNullable(connection).orElseGet(() -> newConnection(userAgent));
         this.apiKey = apiKey;
     }
 
-    private static OmdbConnection newConnection() {
+    private static OmdbConnection newConnection(final String userAgent) {
         return new OmdbConnectionBuilder()
                 .baseUrl(API_URL)
-                .userAgent(USER_AGENT)
+                .userAgent(userAgent)
                 .gsonFactory(new GsonFactory())
                 .authManager(new NoOpAuthManager())
                 .httpClient(new OkHttpClient.Builder().build())
