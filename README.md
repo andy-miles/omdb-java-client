@@ -77,7 +77,7 @@ A client for Java programmatic access to [The Open Movie Database API](https://w
 3. Instantiate the client with your API key
 
    ```java
-   OMDb client = new OMDb("MyApiKey");
+   OMDb client = new OMDb("MyApiKey", "MyUserAgent/1.0");
    // Access APIs
    SearchResponse movieSearchResults =
            client.search(SearchMovieRequest.builder()
