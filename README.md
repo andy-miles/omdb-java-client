@@ -23,9 +23,9 @@
   <p align="center">
     A Java client to access The Open Movie Database (OMDb)
     <br />
-    <a href="https://www.amilesend.com/omdb-java-client"><strong>Maven Project Info</strong></a>
+    <a href="https://www.amilesend.com/omdb-java-client-"><strong>Maven Project Info</strong></a>
     -
-    <a href="https://www.amilesend.com/omdb-java-client/apidocs/index.html"><strong>Javadoc</strong></a>
+    <a href="https://www.amilesend.com/omdb-java-client-/apidocs/index.html"><strong>Javadoc</strong></a>
     <br />
     <a href="https://github.com/andy-miles/omdb-java-client/issues">Report Bug</a>
     -
