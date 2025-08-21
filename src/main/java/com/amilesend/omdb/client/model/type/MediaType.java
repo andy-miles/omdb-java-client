@@ -17,10 +17,9 @@
  */
 package com.amilesend.omdb.client.model.type;
 
-import com.google.common.collect.ImmutableMap;
+import com.amilesend.client.util.Validate;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.lang3.Validate;
 
 import java.util.Map;
 
@@ -35,7 +34,7 @@ public enum MediaType {
     /** The parameter name. */
     public static final String MEDIA_TYPE_OBJ_NAME = "Type";
 
-    private static final Map<String, MediaType> VALUE_TO_MEDIA_TYPE = ImmutableMap.of(
+    private static final Map<String, MediaType> VALUE_TO_MEDIA_TYPE = Map.of(
             "movie", MOVIE,
             "series", SERIES,
             "episode", EPISODE);

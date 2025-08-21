@@ -17,11 +17,11 @@
  */
 package com.amilesend.omdb.client.model;
 
+import com.amilesend.client.util.Validate;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.experimental.SuperBuilder;
 import okhttp3.HttpUrl;
-import org.apache.commons.lang3.Validate;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;

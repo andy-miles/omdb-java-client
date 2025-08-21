@@ -17,8 +17,8 @@
  */
 package com.amilesend.omdb.client.model.type;
 
+import com.amilesend.client.util.StringUtils;
 import lombok.experimental.UtilityClass;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -43,7 +43,7 @@ public class TypeHelper {
         }
 
         return Arrays.stream(commonDelimitedList.split(STRING_LIST_DELIMITER))
-                .map(StringUtils::trim)
+                .map(String::trim)
                 .filter(StringUtils::isNotBlank)
                 .collect(Collectors.toUnmodifiableList());
     }

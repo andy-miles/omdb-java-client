@@ -17,11 +17,11 @@
  */
 package com.amilesend.omdb.client.model.type;
 
+import com.amilesend.client.util.StringUtils;
 import com.google.gson.annotations.SerializedName;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.Collections;
 import java.util.List;

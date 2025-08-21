@@ -17,11 +17,11 @@
  */
 package com.amilesend.omdb.client.parse.adapters;
 
+import com.amilesend.client.util.StringUtils;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
-import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.Type;
 
@@ -40,7 +40,7 @@ public class StringTypeAdaptor implements JsonDeserializer<String> {
         }
 
         final String value = jsonElement.getAsString();
-        if (StringUtils.isBlank(value) || StringUtils.equals(value, NOT_AVAILABLE)) {
+        if (StringUtils.isBlank(value) || NOT_AVAILABLE.equals(value)) {
             return null;
         }
 

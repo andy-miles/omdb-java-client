@@ -17,10 +17,10 @@
  */
 package com.amilesend.omdb.client.parse.adapters;
 
+import com.amilesend.client.util.StringUtils;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonPrimitive;
-import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;

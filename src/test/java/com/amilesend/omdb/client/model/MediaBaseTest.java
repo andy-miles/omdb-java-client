@@ -17,10 +17,10 @@
  */
 package com.amilesend.omdb.client.model;
 
+import com.amilesend.client.util.StringUtils;
 import com.amilesend.omdb.client.model.movie.type.Movie;
 import com.amilesend.omdb.client.model.tv.type.Series;
 import com.amilesend.omdb.client.model.type.Rating;
-import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

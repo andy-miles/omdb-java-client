@@ -17,6 +17,7 @@
  */
 package com.amilesend.omdb.client.model.tv;
 
+import com.amilesend.client.util.Validate;
 import com.amilesend.omdb.client.model.GetByIdRequestBase;
 import com.amilesend.omdb.client.model.type.MediaType;
 import lombok.EqualsAndHashCode;
@@ -25,7 +26,6 @@ import lombok.NonNull;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 import okhttp3.HttpUrl;
-import org.apache.commons.lang3.Validate;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;

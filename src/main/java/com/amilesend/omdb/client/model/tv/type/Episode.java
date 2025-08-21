@@ -17,13 +17,13 @@
  */
 package com.amilesend.omdb.client.model.tv.type;
 
+import com.amilesend.client.util.StringUtils;
 import com.amilesend.omdb.client.model.type.MediaBase;
 import com.google.gson.annotations.SerializedName;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.Optional;
 

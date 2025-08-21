@@ -17,12 +17,12 @@
  */
 package com.amilesend.omdb.client.model;
 
+import com.amilesend.client.util.StringUtils;
 import com.amilesend.omdb.client.model.tv.GetEpisodeByIdRequest;
 import com.amilesend.omdb.client.model.tv.GetEpisodeByTitleRequest;
 import com.amilesend.omdb.client.model.tv.GetSeasonByIdRequest;
 import com.amilesend.omdb.client.model.tv.GetSeasonByTitleRequest;
 import okhttp3.HttpUrl;
-import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;

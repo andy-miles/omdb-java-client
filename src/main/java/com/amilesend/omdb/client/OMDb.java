@@ -19,6 +19,7 @@ package com.amilesend.omdb.client;
 
 import com.amilesend.client.connection.auth.NoOpAuthManager;
 import com.amilesend.client.parse.parser.BasicParser;
+import com.amilesend.client.util.Validate;
 import com.amilesend.omdb.client.connection.OmdbConnection;
 import com.amilesend.omdb.client.connection.OmdbConnectionBuilder;
 import com.amilesend.omdb.client.model.QueryParameterBasedRequest;
@@ -46,7 +47,6 @@ import lombok.NonNull;
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import org.apache.commons.lang3.Validate;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;

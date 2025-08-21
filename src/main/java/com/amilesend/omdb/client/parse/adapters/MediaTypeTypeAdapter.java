@@ -17,6 +17,7 @@
  */
 package com.amilesend.omdb.client.parse.adapters;
 
+import com.amilesend.client.util.StringUtils;
 import com.amilesend.omdb.client.model.type.MediaType;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -25,7 +26,6 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.Type;
 import java.util.Optional;

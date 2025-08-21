@@ -17,12 +17,12 @@
  */
 package com.amilesend.omdb.client.model.type;
 
+import com.amilesend.client.util.StringUtils;
 import com.google.gson.annotations.SerializedName;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
-import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDate;
 import java.util.Collections;

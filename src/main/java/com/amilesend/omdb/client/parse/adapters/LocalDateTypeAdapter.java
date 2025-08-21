@@ -17,6 +17,7 @@
  */
 package com.amilesend.omdb.client.parse.adapters;
 
+import com.amilesend.client.util.StringUtils;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -25,7 +26,6 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.Type;
 import java.time.LocalDate;
@@ -61,7 +61,7 @@ public class LocalDateTypeAdapter implements JsonSerializer<LocalDate>, JsonDese
         }
 
         final String timeAsString = jsonElement.getAsString();
-        if (StringUtils.isBlank(timeAsString) || StringUtils.equals(timeAsString, NOT_AVAILABLE)) {
+        if (StringUtils.isBlank(timeAsString) || NOT_AVAILABLE.equals(timeAsString)) {
             return null;
         }
 
