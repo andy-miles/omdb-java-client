@@ -71,7 +71,7 @@ A client for Java programmatic access to [The Open Movie Database API](https://w
    <dependency>
        <groupId>com.amilesend</groupId>
        <artifactId>omdb-java-client</artifactId>
-       <version>2.1.4</version>
+       <version>2.1.5</version>
    </dependency>
    ```
 3. Instantiate the client with your API key
