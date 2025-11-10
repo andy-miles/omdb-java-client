@@ -1,5 +1,5 @@
 /*
- * omdb-java-client - A client to access the OMDB API
+ * omdb-java-client - A client to access the OMDb API
  * Copyright © 2025 Andy Miles (andy.miles@amilesend.com)
  *
  * This program is free software: you can redistribute it and/or modify
