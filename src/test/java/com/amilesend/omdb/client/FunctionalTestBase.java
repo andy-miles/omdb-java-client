@@ -32,8 +32,6 @@ import okio.Buffer;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
-import static com.amilesend.omdb.client.OMDb.USER_AGENT;
-
 public class FunctionalTestBase {
     public static final int SUCCESS_STATUS_CODE = 200;
 
@@ -85,12 +83,12 @@ public class FunctionalTestBase {
 
     private void setUpOMDb() {
         connection = new OmdbConnectionBuilder()
-                .userAgent(USER_AGENT)
+                .userAgent("TestUserAgent/1.0")
                 .baseUrl(getMockWebServerUrl())
                 .gsonFactory(new GsonFactory())
                 .httpClient(httpClient)
                 .authManager(new NoOpAuthManager())
                 .build();
-        client = new OMDb("apiKey", "TestUserAgent/1.0", connection);
+        client = new OMDb("apiKey", connection);
     }
 }

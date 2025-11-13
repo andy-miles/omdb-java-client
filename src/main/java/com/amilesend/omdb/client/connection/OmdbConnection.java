@@ -50,9 +50,7 @@ public class OmdbConnection extends Connection<GsonFactory> {
     public <T> T execute(@NonNull final Request request, @NonNull final GsonParser<T> parser)
             throws ConnectionException {
         try {
-            try (final Response response = getHttpClient().newCall(request).execute()) {
-                validateResponseCode(response);
-
+            try (final Response response = super.execute(request)) {
                 final byte[] body = readBody(response.body().byteStream());
                 validateResponseBody(body);
                 return parser.parse(getGsonFactory().getInstance(this), body);

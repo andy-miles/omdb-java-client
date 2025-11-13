@@ -18,6 +18,7 @@
 package com.amilesend.omdb.client;
 
 import com.amilesend.client.connection.auth.NoOpAuthManager;
+import com.amilesend.client.connection.retry.NoRetryStrategy;
 import com.amilesend.client.parse.parser.BasicParser;
 import com.amilesend.client.util.Validate;
 import com.amilesend.omdb.client.connection.OmdbConnection;
@@ -50,11 +51,10 @@ import okhttp3.Request;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.util.Optional;
 
 /** The Open Movie Database client. */
 public class OMDb {
-    public static final String USER_AGENT = "OMDbJavaClient/2.0";
+    public static final String USER_AGENT = "OMDbJavaClient/2.1";
     public static final String API_URL = "http://www.omdbapi.com/";
 
     /** The underlying connection. */
@@ -68,7 +68,7 @@ public class OMDb {
      * @param apiKey the API key
      */
     public OMDb(final String apiKey) {
-        this(apiKey, USER_AGENT, null);
+        this(apiKey, USER_AGENT);
     }
 
     /**
@@ -78,22 +78,20 @@ public class OMDb {
      * @param userAgent the user agent
      */
     public OMDb(final String apiKey, final String userAgent) {
-        this(apiKey, userAgent, null);
+        this(apiKey, newConnection(userAgent));
     }
 
     /**
      * Creates a new {@code OMDb} with the provided connection and API key.
      *
      * @param apiKey the API key
-     * @param userAgent the user agent
      * @param connection the underlying connection
      */
-    public OMDb(final String apiKey, final String userAgent, final OmdbConnection connection) {
+    public OMDb(final String apiKey, @NonNull final OmdbConnection connection) {
         Validate.notBlank(apiKey, "apiKey must not be blank. You can obtain one via " +
                 "https://www.omdbapi.com/apikey.aspx");
-        Validate.notBlank(userAgent, "userAgent must not be blank");
 
-        this.connection = Optional.ofNullable(connection).orElseGet(() -> newConnection(userAgent));
+        this.connection = connection;
         this.apiKey = apiKey;
     }
 
@@ -105,6 +103,7 @@ public class OMDb {
                 .authManager(new NoOpAuthManager())
                 .httpClient(new OkHttpClient.Builder().build())
                 .isGzipContentEncodingEnabled(false)
+                .retryStrategy(new NoRetryStrategy())
                 .build();
     }
 

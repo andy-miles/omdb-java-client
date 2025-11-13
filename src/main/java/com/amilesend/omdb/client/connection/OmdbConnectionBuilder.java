@@ -37,6 +37,7 @@ public class OmdbConnectionBuilder extends ConnectionBuilder<OmdbConnectionBuild
                 .baseUrl(getBaseUrl())
                 .userAgent(getUserAgent())
                 .isGzipContentEncodingEnabled(isGzipContentEncodingEnabled())
+                .retryStrategy(getRetryStrategy())
                 .build();
     }
 }
