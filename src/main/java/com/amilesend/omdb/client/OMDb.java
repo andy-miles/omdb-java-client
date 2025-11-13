@@ -54,7 +54,7 @@ import java.nio.charset.StandardCharsets;
 
 /** The Open Movie Database client. */
 public class OMDb {
-    public static final String USER_AGENT = "OMDbJavaClient/2.1";
+    public static final String USER_AGENT = "OMDbJavaClient/2.2";
     public static final String API_URL = "http://www.omdbapi.com/";
 
     /** The underlying connection. */

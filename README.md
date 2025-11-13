@@ -71,7 +71,7 @@ A client for Java programmatic access to [The Open Movie Database API](https://w
    <dependency>
        <groupId>com.amilesend</groupId>
        <artifactId>omdb-java-client</artifactId>
-       <version>2.1.5</version>
+       <version>2.2</version>
    </dependency>
    ```
 3. Instantiate the client with your API key
@@ -83,6 +83,26 @@ A client for Java programmatic access to [The Open Movie Database API](https://w
            client.search(SearchMovieRequest.builder()
                    .title("Batman")
                    .build());
+   ```
+
+   With a RetryStrategy:
+   ```java
+   OMDb client = new OMDb("MyApiKey", new OmdbConnectionBuilder()
+        .baseUrl(OMDb.API_URL)
+        .userAgent("MyUserAgent/1.0")
+        .gsonFactory(new GsonFactory())
+        .authManager(new NoOpAuthManager())
+        .httpClient(new OkHttpClient.Builder().build())
+        .isGzipContentEncodingEnabled(false)
+        // Options are ExponentialDelayRetryStrategy, FixedDelayRetryStrategy
+        // or NoRetryStrategy (default).
+        .retryStrategy(ExponentialDelayRetryStrategy.builder()
+                .baseDelayMs(500L)
+                .maxJitterMs(100L)
+                .maxAttempts(3)
+                .maxTotalDelayMs(2000L)
+                .build())
+        .build());
    ```
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
